@@ -24,7 +24,7 @@ function Products() {
       const { email } = loginData[0];
       const { id } = e;
       const data = e;
-      const response = await axios.post('http://localhost:5000/user/addcart', { email: email, id: id, data: data });
+      const response = await axios.post('https://shop-x-backend-pi.vercel.app/user/addcart', { email: email, id: id, data: data });
       toast.success('Item added to cart!');
       dispatch(addCart(data));
     } catch (error) {

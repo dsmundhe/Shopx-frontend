@@ -21,7 +21,7 @@ function Cart() {
     const getCarts = async () => {
         const { email } = loginData[0];
         try {
-            const response = await axios.post('http://localhost:5000/user/showcart', { email });
+            const response = await axios.post('https://shop-x-backend-pi.vercel.app/user/showcart', { email });
             setfavs(response.data);
         } catch (error) {
             console.log(error);
@@ -31,7 +31,7 @@ function Cart() {
     const removeCart = async ({ id }) => {
         try {
             const { email } = loginData[0];
-            await axios.post('http://localhost:5000/user/removecart', { id, email });
+            await axios.post('https://shop-x-backend-pi.vercel.app/user/removecart', { id, email });
             dispatch(removeCart1({ id }));
             await getCarts(); // Refresh cart from backend
         } catch (error) {
