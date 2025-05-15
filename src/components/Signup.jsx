@@ -38,7 +38,7 @@ const SignUp = () => {
     setLoader(true);
     try {
       const response = await axios.post(
-        "https://shop-x-backend-pi.vercel.app/user/register",
+        "https://shopx-backend-pffh.onrender.com/user/register",
         formData
       );
       const { success, message } = response.data;

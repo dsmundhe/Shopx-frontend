@@ -24,7 +24,7 @@ const Login = () => {
     e.preventDefault();
     setloader(true);
     try {
-      const response = await axios.post('https://shop-x-backend-pi.vercel.app/user/login', {
+      const response = await axios.post('https://shopx-backend-pffh.onrender.com/user/login', {
         name: name,
         email: email,
         password: password
